@@ -2,9 +2,14 @@ package com.rgr.demo.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
+
 @Entity
 @Table(name = "books")
-public class Book {
+public class Book  implements Serializable {
+
+
+    private static final long serialVersionUID = -2343243243242432341L;
     @Id
     @GeneratedValue
     private Long id;
